@@ -28,12 +28,12 @@ namespace HenryMod
         // if you don't change these you're giving permission to deprecate the mod-
         //  please change the names to your own stuff, thanks
         //   this shouldn't even have to be said
-        public const string MODUID = "com.rob.HenryMod";
-        public const string MODNAME = "HenryMod";
+        public const string MODUID = "com.MoriyaLuna.TechnoEmperor";
+        public const string MODNAME = "TechnoEmperor";
         public const string MODVERSION = "1.0.0";
 
         // a prefix for name tokens to prevent conflicts- please capitalize all name tokens for convention
-        public const string DEVELOPER_PREFIX = "ROB";
+        public const string DEVELOPER_PREFIX = "MORIYALUNA";
 
         public static HenryPlugin instance;
 
