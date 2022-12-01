@@ -17,7 +17,7 @@ namespace HenryMod.Modules
             desc = desc + "< ! > Bomb can be used to wipe crowds with ease." + Environment.NewLine + Environment.NewLine;
 
             string outro = "..and so he left, to expand his empire.";
-            string outroFailure = "..and so he vanished, brilliant light falling dormant.";
+            string outroFailure = "..and so he vanished, brilliant lights falling dormant.";
 
             LanguageAPI.Add(prefix + "NAME", "Techno Emperor");
             LanguageAPI.Add(prefix + "DESCRIPTION", desc);
@@ -39,29 +39,35 @@ namespace HenryMod.Modules
             #endregion
 
             #region Primary
-            LanguageAPI.Add(prefix + "PRIMARY_SLASH_NAME", "Sword");
+            LanguageAPI.Add(prefix + "PRIMARY_SLASH_NAME", "Vulcan Cannon");
             LanguageAPI.Add(prefix + "PRIMARY_SLASH_DESCRIPTION", Helpers.agilePrefix + $"Swing forward for <style=cIsDamage>{100f * StaticValues.swordDamageCoefficient}% damage</style>.");
             #endregion
 
             #region Secondary
-            LanguageAPI.Add(prefix + "SECONDARY_GUN_NAME", "Handgun");
+            LanguageAPI.Add(prefix + "SECONDARY_GUN_NAME", "Heavy Missile");
             LanguageAPI.Add(prefix + "SECONDARY_GUN_DESCRIPTION", Helpers.agilePrefix + $"Fire a handgun for <style=cIsDamage>{100f * StaticValues.gunDamageCoefficient}% damage</style>.");
             #endregion
 
             #region Utility
-            LanguageAPI.Add(prefix + "UTILITY_ROLL_NAME", "Roll");
+            LanguageAPI.Add(prefix + "UTILITY_ROLL_NAME", "Summon Cavalry");
             LanguageAPI.Add(prefix + "UTILITY_ROLL_DESCRIPTION", "Roll a short distance, gaining <style=cIsUtility>300 armor</style>. <style=cIsUtility>You cannot be hit during the roll.</style>");
             #endregion
 
             #region Special
-            LanguageAPI.Add(prefix + "SPECIAL_BOMB_NAME", "Bomb");
+            LanguageAPI.Add(prefix + "SPECIAL_BOMB_NAME", "Conquerer of Steel");
             LanguageAPI.Add(prefix + "SPECIAL_BOMB_DESCRIPTION", $"Throw a bomb for <style=cIsDamage>{100f * StaticValues.bombDamageCoefficient}% damage</style>.");
             #endregion
 
             #region Achievements
-            LanguageAPI.Add(prefix + "MASTERYUNLOCKABLE_ACHIEVEMENT_NAME", "Henry: Mastery");
-            LanguageAPI.Add(prefix + "MASTERYUNLOCKABLE_ACHIEVEMENT_DESC", "As Henry, beat the game or obliterate on Monsoon.");
-            LanguageAPI.Add(prefix + "MASTERYUNLOCKABLE_UNLOCKABLE_NAME", "Henry: Mastery");
+            LanguageAPI.Add(prefix + "MASTERYUNLOCKABLE_ACHIEVEMENT_NAME", "Techno Emperor: Mastery");
+            LanguageAPI.Add(prefix + "MASTERYUNLOCKABLE_ACHIEVEMENT_DESC", "As Techno Emperor, beat the game or obliterate on Monsoon.");
+            LanguageAPI.Add(prefix + "MASTERYUNLOCKABLE_UNLOCKABLE_NAME", "Techno Emperor: Mastery");
+            LanguageAPI.Add(prefix + "GRANDMASTERYUNLOCKABLE_ACHIEVEMENT_NAME", "Techno Emperor: Grand Mastery");
+            LanguageAPI.Add(prefix + "GRANDMASTERYUNLOCKABLE_ACHIEVEMENT_DESC", "As Techno Emperor, beat the game or obliterate on Typhoon or Eclipse.");
+            LanguageAPI.Add(prefix + "GRANDMASTERYUNLOCKABLE_UNLOCKABLE_NAME", "Techno Emperor: Grand Mastery");
+            LanguageAPI.Add(prefix + "INFERNOMASTERYUNLOCKABLE_ACHIEVEMENT_NAME", "Techno Emperor: Survival");
+            LanguageAPI.Add(prefix + "INFERNOMASTERYUNLOCKABLE_ACHIEVEMENT_DESC", "As Techno Emperor, beat the game or obliterate on Inferno.");
+            LanguageAPI.Add(prefix + "INFERNOMASTERYUNLOCKABLE_UNLOCKABLE_NAME", "Techno Emperor: Survival");
             #endregion
             #endregion
         }
