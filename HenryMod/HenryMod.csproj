@@ -13,9 +13,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="eggmanbundle" />
     <None Remove="HenryBank.bnk" />
     <None Remove="Modules\Characters\Henry.cs~RF6221a098.TMP" />
-    <None Remove="myassetbundle" />
   </ItemGroup>
 
 	<ItemGroup>
@@ -29,8 +29,8 @@
 	</ItemGroup>
 	
   <ItemGroup>
+    <EmbeddedResource Include="eggmanbundle" />
     <EmbeddedResource Include="HenryBank.bnk" />
-    <EmbeddedResource Include="myassetbundle" />
   </ItemGroup>
 
   <ItemGroup>
