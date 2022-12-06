@@ -1145,7 +1145,7 @@ GameObject:
   - component: {fileID: 6510179876347953170}
   - component: {fileID: 916731900387662440}
   m_Layer: 0
-  m_Name: mdlEggman
+  m_Name: HenryDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1177,7 +1177,7 @@ Animator:
   m_GameObject: {fileID: 5842046910594914984}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 812c8751dc7080340b2b7c8fbeb32785, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bd84029cf8d223b44b170ff5942ad5fb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
