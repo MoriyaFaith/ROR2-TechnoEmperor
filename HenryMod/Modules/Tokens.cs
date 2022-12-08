@@ -39,23 +39,25 @@ namespace HenryMod.Modules
             #endregion
 
             #region Primary
-            LanguageAPI.Add(prefix + "PRIMARY_SLASH_NAME", "Vulcan Cannon");
-            LanguageAPI.Add(prefix + "PRIMARY_SLASH_DESCRIPTION", Helpers.agilePrefix + $"Swing forward for <style=cIsDamage>{100f * StaticValues.swordDamageCoefficient}% damage</style>.");
+            LanguageAPI.Add(prefix + "PRIMARY_MISSILE_NAME", "Homing Missile Launch");
+            LanguageAPI.Add(prefix + "PRIMARY_MISSILE_DESCRIPTION", Helpers.agilePrefix + $"Lock-on up to 8 enemies while held down. On release, launch a missile at each target for <style=cIsDamage>{100f * StaticValues.swordDamageCoefficient}% damage</style>.");
+            LanguageAPI.Add(prefix + "PRIMARY_VULKAN_NAME", "Vulkan Cannon");
+            LanguageAPI.Add(prefix + "PRIMARY_VULKAN_DESCRIPTION", $"Fire a heavy cannon for <style=cIsDamage>{100f * StaticValues.gunDamageCoefficient}% damage</style>.");
             #endregion
 
             #region Secondary
-            LanguageAPI.Add(prefix + "SECONDARY_GUN_NAME", "Heavy Missile");
-            LanguageAPI.Add(prefix + "SECONDARY_GUN_DESCRIPTION", Helpers.agilePrefix + $"Fire a handgun for <style=cIsDamage>{100f * StaticValues.gunDamageCoefficient}% damage</style>.");
+            LanguageAPI.Add(prefix + "SECONDARY_BOMB_NAME", "Mortar Launch");
+            LanguageAPI.Add(prefix + "SECONDARY_BOMB_DESCRIPTION", $"Throw a bomb for <style=cIsDamage>{100f * StaticValues.bombDamageCoefficient}% damage</style>.");
             #endregion
 
             #region Utility
-            LanguageAPI.Add(prefix + "UTILITY_ROLL_NAME", "Summon Cavalry");
-            LanguageAPI.Add(prefix + "UTILITY_ROLL_DESCRIPTION", "Roll a short distance, gaining <style=cIsUtility>300 armor</style>. <style=cIsUtility>You cannot be hit during the roll.</style>");
+            LanguageAPI.Add(prefix + "UTILITY_ROLL_NAME", "Thruster Dodge");
+            LanguageAPI.Add(prefix + "UTILITY_ROLL_DESCRIPTION", $"Roll a short distance, gaining <style=cIsUtility>300 armor</style>. <style=cIsUtility>You cannot be hit during the roll.</style>");
             #endregion
 
             #region Special
-            LanguageAPI.Add(prefix + "SPECIAL_BOMB_NAME", "Conquerer of Steel");
-            LanguageAPI.Add(prefix + "SPECIAL_BOMB_DESCRIPTION", $"Throw a bomb for <style=cIsDamage>{100f * StaticValues.bombDamageCoefficient}% damage</style>.");
+            LanguageAPI.Add(prefix + "SPECIAL_CANNON_NAME", "Eclipse Cannon");
+            LanguageAPI.Add(prefix + "SPECIAL_CANNON_DESCRIPTION", $"Call down a massive oribital laser from your armada, dealing <style=cIsDamage>{100f * StaticValues.cannonDamageCoefficient}% damage</style>.");
             #endregion
 
             #region Achievements

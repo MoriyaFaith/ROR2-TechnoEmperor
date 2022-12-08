@@ -12,7 +12,7 @@ namespace HenryMod.Modules.Survivors
     {
         //used when building your character using the prefabs you set up in unity
         //don't upload to thunderstore without changing this
-        public override string prefabBodyName => "Henry";
+        public override string prefabBodyName => "Eggman";
 
         public const string TECHNO_EMPEROR_PREFIX = HenryPlugin.DEVELOPER_PREFIX + "_TECHNO_EMPEROR_BODY_";
 
@@ -40,15 +40,6 @@ namespace HenryMod.Modules.Survivors
 
         public override CustomRendererInfo[] customRendererInfos { get; set; } = new CustomRendererInfo[] 
         {
-                new CustomRendererInfo
-                {
-                    childName = "SwordModel",
-                    material = Materials.CreateHopooMaterial("matHenry"),
-                },
-                new CustomRendererInfo
-                {
-                    childName = "GunModel",
-                },
                 new CustomRendererInfo
                 {
                     childName = "Model",
@@ -93,65 +84,44 @@ namespace HenryMod.Modules.Survivors
 
             #region Primary
             //Creates a skilldef for a typical primary 
-            SkillDef primarySkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo(prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_SLASH_NAME",
-                                                                                      prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_SLASH_DESCRIPTION",
-                                                                                      Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texPrimaryIcon"),
+            SkillDef lockOnSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo(prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_MISSILE_NAME",
+                                                                                      prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_MISSILE_DESCRIPTION",
+                                                                                      Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texBazookaOutIcon"),
                                                                                       new EntityStates.SerializableEntityStateType(typeof(SkillStates.SlashCombo)),
-                                                                                      "Weapon",
+                                                                                      "Body",
                                                                                       true));
 
+            SkillDef vulkanSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo(prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_VULKAN_NAME",
+                                                                                      prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_VULKAN_DESCRIPTION",
+                                                                                      Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texBazookaIcon"),
+                                                                                      new EntityStates.SerializableEntityStateType(typeof(SkillStates.Shoot)),
+                                                                                      "Body",
+                                                                                      false));
 
-            Modules.Skills.AddPrimarySkills(bodyPrefab, primarySkillDef);
-            #endregion
 
-            #region Primaries
-            SkillDef shootSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
-            {
-                skillName = prefix + "_TECHNO_EMPEROR_BODY_SECONDARY_GUN_NAME",
-                skillNameToken = prefix + "_TECHNO_EMPEROR_BODY_SECONDARY_GUN_NAME",
-                skillDescriptionToken = prefix + "_TECHNO_EMPEROR_BODY_SECONDARY_GUN_DESCRIPTION",
-                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texSecondaryIcon"),
-                activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.Shoot)),
-                activationStateMachineName = "Slide",
-                baseMaxStock = 1,
-                baseRechargeInterval = 1f,
-                beginSkillCooldownOnSkillEnd = false,
-                canceledFromSprinting = false,
-                forceSprintDuringState = false,
-                fullRestockOnAssign = true,
-                interruptPriority = EntityStates.InterruptPriority.Skill,
-                resetCooldownTimerOnUse = false,
-                isCombatSkill = true,
-                mustKeyPress = false,
-                cancelSprintingOnActivation = false,
-                rechargeStock = 1,
-                requiredStock = 1,
-                stockToConsume = 1,
-                keywordTokens = new string[] { "KEYWORD_AGILE" }
-            });
-
-            Modules.Skills.AddPrimarySkills(bodyPrefab, shootSkillDef);
+            Modules.Skills.AddPrimarySkills(bodyPrefab, lockOnSkillDef); 
+            Modules.Skills.AddPrimarySkills(bodyPrefab, vulkanSkillDef);
             #endregion
 
             #region Secondaries
             SkillDef bombSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
             {
-                skillName = prefix + "_TECHNO_EMPEROR_BODY_SPECIAL_BOMB_NAME",
-                skillNameToken = prefix + "_TECHNO_EMPEROR_BODY_SPECIAL_BOMB_NAME",
-                skillDescriptionToken = prefix + "_TECHNO_EMPEROR_BODY_SPECIAL_BOMB_DESCRIPTION",
+                skillName = prefix + "_TECHNO_EMPEROR_BODY_SECONDARY_BOMB_NAME",
+                skillNameToken = prefix + "_TECHNO_EMPEROR_BODY_SECONDARY_BOMB_NAME",
+                skillDescriptionToken = prefix + "_TECHNO_EMPEROR_BODY_SECONDARY_BOMB_DESCRIPTION",
                 skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texSpecialIcon"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.ThrowBomb)),
                 activationStateMachineName = "Slide",
                 baseMaxStock = 3,
-                baseRechargeInterval = 3f,
-                beginSkillCooldownOnSkillEnd = false,
+                baseRechargeInterval = 4f,
+                beginSkillCooldownOnSkillEnd = true,
                 canceledFromSprinting = false,
                 forceSprintDuringState = false,
-                fullRestockOnAssign = true,
+                fullRestockOnAssign = false,
                 interruptPriority = EntityStates.InterruptPriority.Skill,
                 resetCooldownTimerOnUse = false,
                 isCombatSkill = true,
-                mustKeyPress = false,
+                mustKeyPress = true,
                 cancelSprintingOnActivation = true,
                 rechargeStock = 3,
                 requiredStock = 1,
@@ -188,7 +158,36 @@ namespace HenryMod.Modules.Survivors
 
             Modules.Skills.AddUtilitySkills(bodyPrefab, rollSkillDef);
             Modules.Skills.AddSpecialSkills(bodyPrefab, rollSkillDef);
-            #endregion
+            #endregion            
+            
+            #region Special
+            SkillDef cannonSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
+            {
+                skillName = prefix + "_TECHNO_EMPEROR_BODY_SPECIAL_CANNON_NAME",
+                skillNameToken = prefix + "_TECHNO_EMPEROR_BODY_SPECIAL_CANNON_NAME",
+                skillDescriptionToken = prefix + "_TECHNO_EMPEROR_BODY_SPECIAL_CANNON_DESCRIPTION",
+                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texStingerIcon"),
+                activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.SlashCombo)),
+                activationStateMachineName = "Body",
+                baseMaxStock = 1,
+                baseRechargeInterval = 60f,
+                beginSkillCooldownOnSkillEnd = false,
+                canceledFromSprinting = false,
+                forceSprintDuringState = true,
+                fullRestockOnAssign = true,
+                interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
+                resetCooldownTimerOnUse = false,
+                isCombatSkill = false,
+                mustKeyPress = false,
+                cancelSprintingOnActivation = false,
+                rechargeStock = 1,
+                requiredStock = 1,
+                stockToConsume = 1
+            });
+
+            Modules.Skills.AddUtilitySkills(bodyPrefab, rollSkillDef);
+            Modules.Skills.AddSpecialSkills(bodyPrefab, cannonSkillDef);
+#endregion
 
         }
 

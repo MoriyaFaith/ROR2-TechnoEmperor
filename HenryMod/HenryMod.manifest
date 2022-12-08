@@ -1,11 +1,7 @@
 ManifestFileVersion: 0
-CRC: 1739510722
+CRC: 1220567898
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: myassetbundle
-      Dependencies:
-        Dependency_0: eggmanbundle
-    Info_1:
       Name: eggmanbundle
       Dependencies: {}

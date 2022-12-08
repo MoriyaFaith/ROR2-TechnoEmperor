@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 788701336
+CRC: 1261121796
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b48ea78f4e4961a3471cf3cf1a6c0430
+    Hash: f9c1313a6dda360740b33223f2a19192
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 73c6acd04d390eaba20bc4c507b8acfd
+    Hash: a0ba3c010d2f144a80a736f7add95039
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -17,13 +17,19 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 23
   Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
 - Class: 33
   Script: {instanceID: 0}
 - Class: 43
   Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
 - Class: 54
   Script: {instanceID: 0}
 - Class: 65
+  Script: {instanceID: 0}
+- Class: 74
   Script: {instanceID: 0}
 - Class: 90
   Script: {instanceID: 0}
@@ -49,9 +55,92 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 144
   Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 319
+  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
+- Assets/HenryAssets/Animation/maskAimBazooka.mask
+- Assets/HenryAssets/Materials/matBazookaRocket.mat
+- Assets/HenryAssets/Mesh/meshHenry.mesh
 - Assets/HenryAssets/HenryDisplay.prefab
+- Assets/HenryAssets/Materials/matHenry.mat
+- Assets/HenryAssets/Textures/texHenryAlt.png
+- Assets/HenryAssets/Animation/clips/Jump.anim
+- Assets/HenryAssets/Mesh/meshHenryNeo.mesh
+- Assets/HenryAssets/Animation/clips/WalkR.anim
+- Assets/HenryAssets/Animation/clips/SprintL.anim
+- Assets/HenryAssets/Materials/matRebellion.mat
+- Assets/HenryAssets/Textures/texBoxingGlove.png
+- Assets/HenryAssets/Animation/maskAimYaw.mask
+- Assets/HenryAssets/Animation/animHenry.controller
+- Assets/HenryAssets/Textures/texBazooka.png
+- Assets/HenryAssets/Mesh/meshVergil.mesh
+- Assets/HenryAssets/Animation/clips/LightImpact.anim
+- Assets/HenryAssets/Animation/clips/WalkB.anim
+- Assets/HenryAssets/Animation/maskGesture.mask
+- Assets/HenryAssets/Mesh/meshHenryAlt.mesh
+- Assets/HenryAssets/Textures/texHenryJedi.png
+- Assets/HenryAssets/Animation/clips/SprintR.anim
+- Assets/HenryAssets/Animation/animHenryMenu.controller
+- Assets/HenryAssets/Textures/texShotgun.png
+- Assets/HenryAssets/Animation/clips/WalkL.anim
+- Assets/HenryAssets/Animation/maskImpact.mask
+- Assets/HenryAssets/Animation/clips/Idle.anim
+- Assets/HenryAssets/Animation/clips/Slash2.anim
+- Assets/HenryAssets/Mesh/meshYamato.mesh
+- Assets/HenryAssets/Materials/matBoxingGlove.mat
+- Assets/HenryAssets/Materials/matHenryAlt.mat
+- Assets/HenryAssets/Animation/clips/WalkF.anim
+- Assets/HenryAssets/Materials/matDante.mat
+- Assets/HenryAssets/Animation/maskLeftArm.mask
+- Assets/HenryAssets/Mesh/MeshHenryGun.mesh
+- Assets/HenryAssets/Animation/clips/DescendFast.anim
+- Assets/HenryAssets/HenryBazookaRocketGhost.prefab
+- Assets/HenryAssets/Mesh/meshDante.mesh
+- Assets/HenryAssets/Materials/matHenryJedi.mat
+- Assets/HenryAssets/Mesh/meshNeoCoat.mesh
+- Assets/HenryAssets/Animation/clips/ShootGun.anim
+- Assets/HenryAssets/Animation/clips/SprintF.anim
+- Assets/HenryAssets/Mesh/meshHenrySwordAlt.mesh
+- Assets/HenryAssets/Textures/texHenry.png
+- Assets/HenryAssets/Animation/maskAimPitch.mask
+- Assets/HenryAssets/Materials/matHenryNeo.mat
+- Assets/HenryAssets/Materials/matRoy.mat
+- Assets/HenryAssets/Textures/texHenryNeo.png
+- Assets/HenryAssets/Materials/matVergil.mat
+- Assets/HenryAssets/Materials/matHitboxPreview.mat
+- Assets/HenryAssets/Animation/clips/IdleIn.anim
+- Assets/HenryAssets/Textures/texHenryJediEmission.png
+- Assets/HenryAssets/Mesh/meshDanteCoat.mesh
+- Assets/HenryAssets/Animation/clips/RestIdle.anim
+- Assets/HenryAssets/Animation/clips/ThrowBomb.anim
+- Assets/HenryAssets/Animation/clips/Ascend.anim
 - Assets/HenryAssets/mdlHenry.prefab
+- Assets/HenryAssets/Mesh/meshRebellion.mesh
+- Assets/HenryAssets/Mesh/meshHenrySword.mesh
+- Assets/HenryAssets/Animation/clips/AimYaw.anim
+- Assets/HenryAssets/HenryBombGhost.prefab
+- Assets/HenryAssets/Mesh/meshPistol.mesh
+- Assets/HenryAssets/Textures/texHenryVergil.png
+- Assets/HenryAssets/Mesh/meshUzi.mesh
+- Assets/HenryAssets/Mesh/meshVergilCoat.mesh
+- Assets/HenryAssets/Animation/clips/RestIdleIn.anim
+- Assets/HenryAssets/Animation/clips/DefaultPose.anim
+- Assets/HenryAssets/Materials/matShotgun.mat
+- Assets/HenryAssets/Animation/clips/IdleAdditive.anim
+- Assets/HenryAssets/Animation/maskBandana.mask
+- Assets/HenryAssets/Animation/clips/MenuIdle.anim
+- Assets/HenryAssets/Materials/matBazooka.mat
+- Assets/HenryAssets/Animation/clips/Descend.anim
+- Assets/HenryAssets/Textures/texHenryDante.png
+- Assets/HenryAssets/Animation/clips/AimPitch.anim
+- Assets/HenryAssets/Textures/texHenryDanteEmission.png
+- Assets/HenryAssets/Animation/clips/MenuIdleIn.anim
+- Assets/HenryAssets/Animation/clips/Slash1.anim
+- Assets/HenryAssets/Animation/clips/Roll.anim
 Dependencies:
 - D:/Programs/Unity/ROR2-TechnoEmperor/HenryMod/eggmanbundle

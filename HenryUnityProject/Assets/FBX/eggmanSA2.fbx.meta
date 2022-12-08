@@ -2,13 +2,246 @@ fileFormatVersion: 2
 guid: 812c8751dc7080340b2b7c8fbeb32785
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
-  externalObjects: {}
+  internalIDToNameTable:
+  - first:
+      74: 4229319454462945294
+    second: armature|armatureAction
+  - first:
+      74: 4545913450476898902
+    second: armature|armatureAction.001
+  - first:
+      74: 2967835736852757281
+    second: armature|boxingGlove
+  - first:
+      74: 5151711328402587764
+    second: armature|dashForward
+  - first:
+      74: 5821088480545819885
+    second: armature|death
+  - first:
+      74: 8642551721451941144
+    second: armature|eggCantTell
+  - first:
+      74: 5036604935426039882
+    second: armature|eggCantTell2
+  - first:
+      74: -3682832080385436266
+    second: armature|eggCantTell3
+  - first:
+      74: -5687941501283414270
+    second: armature|eggConfused
+  - first:
+      74: 320082811334976141
+    second: armature|eggLook
+  - first:
+      74: -6945234469976129547
+    second: armature|falling
+  - first:
+      74: -4640871509164784337
+    second: armature|fallStart
+  - first:
+      74: -2063859563955119408
+    second: armature|hover
+  - first:
+      74: -7862043727102348549
+    second: armature|hurt
+  - first:
+      74: -1235105548025791303
+    second: armature|hurt2
+  - first:
+      74: 8643588234038878946
+    second: armature|idle
+  - first:
+      74: -7445247745083329734
+    second: armature|idleFast
+  - first:
+      74: -7827349085158838590
+    second: armature|intro
+  - first:
+      74: -5998818626504890894
+    second: armature|jumpBack
+  - first:
+      74: -4613025503262718207
+    second: armature|jumpToBack
+  - first:
+      74: -2826616293976022003
+    second: armature|jumpUp
+  - first:
+      74: -5509471631079229357
+    second: armature|land
+  - first:
+      74: -5838248978202329726
+    second: armature|landLight
+  - first:
+      74: 2906523362709953213
+    second: armature|leapForward
+  - first:
+      74: -8792032052844814127
+    second: armature|loss
+  - first:
+      74: 7837509930529102926
+    second: armature|menuIntro
+  - first:
+      74: 4414008213154678903
+    second: armature|mysticMelody
+  - first:
+      74: 2769701243183995085
+    second: armature|springLand
+  - first:
+      74: 8069942844218066523
+    second: armature|springLeap
+  - first:
+      74: -2191515707380769547
+    second: armature|sprintForward
+  - first:
+      74: -8555302062510192842
+    second: armature|startFall
+  - first:
+      74: 8954307240652002212
+    second: armature|swing
+  - first:
+      74: -2686669035177754351
+    second: armature|tumbleFlip
+  - first:
+      74: -1550272735557215752
+    second: armature|turn
+  - first:
+      74: 6093324255963403898
+    second: armature|walkForward
+  - first:
+      74: -6277030035938100011
+    second: armature|yosh
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matCockpit
+    second: {fileID: 2100000, guid: 393199d84d65341439791d53bcdc5273, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matEggButtonWhite
+    second: {fileID: 2100000, guid: b1105b58aedfd154d82cef1deddcfa52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matEggButtons
+    second: {fileID: 2100000, guid: 6aed037eedf9c894fa04af574badf864, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matEggCoat
+    second: {fileID: 2100000, guid: befc1c900152b514bb08e710740b656c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matEggCoat2
+    second: {fileID: 2100000, guid: a839260ee8cbb484d868cf6f376df03a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matEggCoatStripe
+    second: {fileID: 2100000, guid: c66b16c7c88e1724bb79fea7dc142e5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matEggWaist
+    second: {fileID: 2100000, guid: d98b356e8d4923b4189963f7e3dc758e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matGlasses
+    second: {fileID: 2100000, guid: 8db08c2fb14f0494e91f437676cf5872, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matGloves
+    second: {fileID: 2100000, guid: 7607fba6d1f49b24abdc238301027aae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matGoggles
+    second: {fileID: 2100000, guid: 32187b31f453cf8498c538a4dd088ded, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matHandles
+    second: {fileID: 2100000, guid: 2f435c4022f63744c8eb84938b30395d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matMoustache
+    second: {fileID: 2100000, guid: 74f0a84957003fd4cb9fbd7935272ac4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matWalkerAnkles
+    second: {fileID: 2100000, guid: a94a75260edadd8458c6c1abd612e2f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matWalkerBlack
+    second: {fileID: 2100000, guid: bd9b3f38414437b498f93b562b77d0be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matWalkerBody
+    second: {fileID: 2100000, guid: a7f362d441973f2418a1c3e3d9ab3ae9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matWalkerDecal
+    second: {fileID: 2100000, guid: 3c68cc66531d805419a7d93f3049e576, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matWalkerDecal2
+    second: {fileID: 2100000, guid: 4765c486ed1e38e4b8dd78462a7ed720, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matWalkerDecal3
+    second: {fileID: 2100000, guid: a5715e8a161664d4e961d18ac1ef7365, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matWalkerExhaustPort
+    second: {fileID: 2100000, guid: 9515e8c2067fde74bbdbef2d99f65631, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matWalkerFeet
+    second: {fileID: 2100000, guid: 64933758e530e654eb1b68dba74efc11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matWalkerGlass
+    second: {fileID: 2100000, guid: 5d39a0d48836cf74e97eac7f688a18a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matWalkerRed
+    second: {fileID: 2100000, guid: d52eac52efe5781498ad231719a6c8a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matWalkerSoles
+    second: {fileID: 2100000, guid: 55db09bdf2b11f54e989abd82d991f62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matWalkerToes
+    second: {fileID: 2100000, guid: 574a9ef3d7dc1dd4aa3e7426dd2e430b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: matWalkerUnderside
+    second: {fileID: 2100000, guid: f4e5ebd2430219c4e9195072a5f9a64a, type: 2}
   materials:
     materialImportMode: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -22,8 +255,8 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 0
-    animationCompression: 1
+    importConstraints: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -73,7 +306,229 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: eggmanSA2(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: armature
+      parentName: eggmanSA2(Clone)
+      position: {x: -0, y: -0.0027658998, z: 0}
+      rotation: {x: -0.7071067, y: 5.302452e-33, z: 5.302451e-33, w: 0.7071068}
+      scale: {x: 10, y: 10, z: 10}
+    - name: root
+      parentName: armature
+      position: {x: -1.086e-40, y: 0, z: 0.14314021}
+      rotation: {x: 0.000000059604645, y: -0.00000004371139, z: 5.3290705e-15, w: 1}
+      scale: {x: 0.99999964, y: 0.99999994, z: 0.99999964}
+    - name: thigh.L
+      parentName: root
+      position: {x: 3.843084e-11, y: -0.05999998, z: 0.000000038149942}
+      rotation: {x: 0.000000012582758, y: -0.61452615, z: 0.00000015583791, w: 0.7888965}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1.0000002}
+    - name: knee.L
+      parentName: thigh.L
+      position: {x: -0.06103281, y: -0.0000000047683715, z: 0.0000000333786}
+      rotation: {x: -0.06884989, y: 0.23612711, z: 0.05683325, w: -0.96761245}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000001}
+    - name: ankle.L
+      parentName: knee.L
+      position: {x: -0.0700072, y: -0.000000082864105, z: 0.00000004109297}
+      rotation: {x: 0.5711224, y: 0.23197728, z: -0.3659047, w: -0.6972228}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000002}
+    - name: foot.L
+      parentName: ankle.L
+      position: {x: -0.029264655, y: 0.00000007958433, z: -0.0007353197}
+      rotation: {x: -0.000000015872828, y: -0.38605794, z: 0.00000198435, w: 0.9224746}
+      scale: {x: 1.0000006, y: 1.0000002, z: 0.9999999}
+    - name: foot.L_end
+      parentName: foot.L
+      position: {x: -0, y: 0.010000062, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: thigh.R
+      parentName: root
+      position: {x: 3.843084e-11, y: 0.06000001, z: 0.000000038149942}
+      rotation: {x: 0.000000014567956, y: -0.6550443, z: 0.00000018805532, w: 0.7555905}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1.0000002}
+    - name: knee.R
+      parentName: thigh.R
+      position: {x: -0.061032813, y: 0.0000000047683715, z: -0.0000000047683715}
+      rotation: {x: -0.069085345, y: 0.2336177, z: 0.05702643, w: -0.9681932}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000002}
+    - name: ankle.R
+      parentName: knee.R
+      position: {x: -0.07000715, y: 0.000000022040076, z: -0.00000000652229}
+      rotation: {x: -0.5246859, y: -0.1974003, z: 0.3722802, w: 0.7396928}
+      scale: {x: 0.99999976, y: 1, z: 0.9999997}
+    - name: foot.R
+      parentName: ankle.R
+      position: {x: -0.029264633, y: 0.0000000046974473, z: -0.00073533435}
+      rotation: {x: -0.00000044011654, y: 0.3860579, z: -0.0000018937451, w: -0.9224745}
+      scale: {x: 1.0000005, y: 1, z: 1}
+    - name: foot.R_end
+      parentName: foot.R
+      position: {x: -0, y: 0.01, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: waist
+      parentName: root
+      position: {x: 9.60771e-12, y: 0, z: 0.0000000095374855}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000002}
+    - name: unused_01
+      parentName: waist
+      position: {x: 9.60771e-12, y: 0, z: 7.4193093e-13}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: unused_01_end
+      parentName: unused_01
+      position: {x: -0, y: 0.01, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: unused_02
+      parentName: waist
+      position: {x: 9.60771e-12, y: 0, z: 7.4193093e-13}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: unused_02_end
+      parentName: unused_02
+      position: {x: -0, y: 0.01, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: unused_03
+      parentName: waist
+      position: {x: 0.06999995, y: -0.045999996, z: 0.02800002}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: unused_03_end
+      parentName: unused_03
+      position: {x: -0, y: 0.01, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pilot_root
+      parentName: waist
+      position: {x: -0.0060000005, y: 0, z: 0.02802112}
+      rotation: {x: -0, y: 3.6379788e-10, z: -2.1684043e-17, w: 1}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: pilot_waist
+      parentName: pilot_root
+      position: {x: 0.01110844, y: 0, z: 0.009377997}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: unused_04
+      parentName: pilot_waist
+      position: {x: 2.9802322e-10, y: 0.00000001013279, z: -0.0019924277}
+      rotation: {x: -0.1695435, y: 0.17494766, z: -0.000000040331297, w: 0.9698703}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shoulder_L
+      parentName: unused_04
+      position: {x: -0.0268288, y: -0.026000014, z: 0.025744857}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: 018_object_00003488
+      parentName: shoulder_L
+      position: {x: 0.00000001385808, y: -0.000000007152557, z: -0.000000008419156}
+      rotation: {x: -0.22888231, y: -0.90676045, z: 0.1138041, w: 0.3353312}
+      scale: {x: 1.0000004, y: 1.0000002, z: 0.9999995}
+    - name: 019_object_000030A4
+      parentName: 018_object_00003488
+      position: {x: -0.029314442, y: 0.00013192206, z: -0.0001290524}
+      rotation: {x: 0.19949391, y: -0.58111817, z: -0.2581213, w: 0.74557185}
+      scale: {x: 1.0000001, y: 1.0000004, z: 0.99999976}
+    - name: 020_object_00002BB8
+      parentName: 019_object_000030A4
+      position: {x: -0.042242978, y: -0.00016183406, z: 0.0001728946}
+      rotation: {x: -0.00000075995905, y: 0.000000029802315, z: -0.00000043958414,
+        w: 1}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000002}
+    - name: 021_object_00002B84
+      parentName: 020_object_00002BB8
+      position: {x: 0.010070802, y: 0.000038587154, z: -0.000041231513}
+      rotation: {x: -0.31171104, y: 0.70292443, z: -0.16609725, w: 0.61736965}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1}
+    - name: 022_object_00002B50
+      parentName: 021_object_00002B84
+      position: {x: 0.000000006854534, y: 0.000000012516975, z: -8.9406965e-10}
+      rotation: {x: 0.00000046193588, y: 0.00000068545324, z: -0.0000010728834, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: 022_object_00002B50_end
+      parentName: 022_object_00002B50
+      position: {x: -0, y: 0.010000029, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shoulder_R
+      parentName: unused_04
+      position: {x: -0.0268288, y: 0.025999999, z: 0.025744857}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: 024_object_00005240
+      parentName: shoulder_R
+      position: {x: 0.000000001490116, y: 0.000000009536743, z: 0.000000029578805}
+      rotation: {x: -0.08532947, y: 0.94415784, z: 0.3159789, w: 0.037978034}
+      scale: {x: 1.0000004, y: 1.0000004, z: 1.0000002}
+    - name: 025_object_00004E40
+      parentName: 024_object_00005240
+      position: {x: -0.027570963, y: -0.00007832609, z: -0.00012737572}
+      rotation: {x: 0.0007852583, y: -0.1619539, z: 0.020618744, w: 0.9865826}
+      scale: {x: 1.0000004, y: 0.9999998, z: 1.0000001}
+    - name: 026_object_0000396C
+      parentName: 025_object_00004E40
+      position: {x: -0.044321742, y: 0.00022311688, z: 0.00014712721}
+      rotation: {x: -0.00000057928264, y: -0.000000059604645, z: 0.00000045076013,
+        w: 1}
+      scale: {x: 0.99999976, y: 1, z: 1.0000001}
+    - name: 027_object_00003938
+      parentName: 026_object_0000396C
+      position: {x: 0.010077162, y: -0.000050690473, z: -0.000033527613}
+      rotation: {x: 0.2514675, y: 0.70752996, z: 0.18797134, w: 0.63311315}
+      scale: {x: 0.9999996, y: 1.0000001, z: 0.99999994}
+    - name: 028_object_00003904
+      parentName: 027_object_00003938
+      position: {x: 0.000000019967555, y: 0.000000008940696, z: 0.0000000047683715}
+      rotation: {x: -0.7329919, y: -0.00000059604633, z: -0.043344166, w: 0.6788551}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000004}
+    - name: 028_object_00003904_end
+      parentName: 028_object_00003904
+      position: {x: -0, y: 0.00999999, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: neck
+      parentName: unused_04
+      position: {x: -0.023032412, y: 0, z: 0.03638618}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: unused_05
+      parentName: neck
+      position: {x: -0.000000007152557, y: 0, z: -0.000000068135556}
+      rotation: {x: -0.000000004502016, y: 0.99901915, z: 5.847057e-11, w: 0.044281382}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: unused_06
+      parentName: unused_05
+      position: {x: -0.0005222467, y: 0.00012455584, z: -0.00013361394}
+      rotation: {x: -0.15291385, y: -0.006054603, z: 0.5596657, w: -0.8144661}
+      scale: {x: 1.000001, y: 1.0000005, z: 1.0000004}
+    - name: unused_06_end
+      parentName: unused_06
+      position: {x: -0, y: 0.010000004, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: unused_07
+      parentName: unused_05
+      position: {x: -0.024238126, y: -0.0000000041723243, z: 0.000021251886}
+      rotation: {x: 1.6496104e-10, y: -0.000000011175872, z: 0.0000000037216359, w: 1}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000001}
+    - name: unused_07_end
+      parentName: unused_07
+      position: {x: -0, y: 0.010000003, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Eggman
+      parentName: eggmanSA2(Clone)
+      position: {x: -0, y: -0.0027658998, z: 0}
+      rotation: {x: -0.7071067, y: -0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+      scale: {x: 10, y: 10, z: 10}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -82,9 +537,9 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: root
+    rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
