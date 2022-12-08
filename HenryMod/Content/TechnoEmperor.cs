@@ -82,7 +82,7 @@ namespace HenryMod.Modules.Survivors
             Modules.Skills.CreateSkillFamilies(bodyPrefab);
             string prefix = HenryPlugin.DEVELOPER_PREFIX;
 
-            #region Primary
+            #region Primaries
             //Creates a skilldef for a typical primary 
             SkillDef lockOnSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo(prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_MISSILE_NAME",
                                                                                       prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_MISSILE_DESCRIPTION",

@@ -7,7 +7,7 @@ namespace HenryMod.Modules
     {
         internal static void AddTokens()
         {
-            #region Henry
+            #region Eggman
             string prefix = HenryPlugin.DEVELOPER_PREFIX + "_TECHNO_EMPEROR_BODY_";
 
             string desc = "Henry is a skilled fighter who makes use of a wide arsenal of weaponry to take down his foes.<color=#CCD3E0>" + Environment.NewLine + Environment.NewLine;
@@ -42,7 +42,7 @@ namespace HenryMod.Modules
             LanguageAPI.Add(prefix + "PRIMARY_MISSILE_NAME", "Homing Missile Launch");
             LanguageAPI.Add(prefix + "PRIMARY_MISSILE_DESCRIPTION", Helpers.agilePrefix + $"Lock-on up to 8 enemies while held down. On release, launch a missile at each target for <style=cIsDamage>{100f * StaticValues.swordDamageCoefficient}% damage</style>.");
             LanguageAPI.Add(prefix + "PRIMARY_VULKAN_NAME", "Vulkan Cannon");
-            LanguageAPI.Add(prefix + "PRIMARY_VULKAN_DESCRIPTION", $"Fire a heavy cannon for <style=cIsDamage>{100f * StaticValues.gunDamageCoefficient}% damage</style>.");
+            LanguageAPI.Add(prefix + "PRIMARY_VULKAN_DESCRIPTION", $"Fire a heavy cannon for <style=cIsDamage>{100f * StaticValues.gunDamageCoefficient}% damage</style>. Currently DOES NOT WORK.");
             #endregion
 
             #region Secondary
@@ -56,7 +56,7 @@ namespace HenryMod.Modules
             #endregion
 
             #region Special
-            LanguageAPI.Add(prefix + "SPECIAL_CANNON_NAME", "Eclipse Cannon");
+            LanguageAPI.Add(prefix + "SPECIAL_CANNON_NAME", "Oribital Cannon");
             LanguageAPI.Add(prefix + "SPECIAL_CANNON_DESCRIPTION", $"Call down a massive oribital laser from your armada, dealing <style=cIsDamage>{100f * StaticValues.cannonDamageCoefficient}% damage</style>.");
             #endregion
 
