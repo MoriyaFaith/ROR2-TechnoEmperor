@@ -128,11 +128,61 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1030387685326343890, guid: a54ff21ef0068eb4e9638606ac7733c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030387685326343890, guid: a54ff21ef0068eb4e9638606ac7733c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.289989
+      objectReference: {fileID: 0}
+    - target: {fileID: 2835178070394785709, guid: a54ff21ef0068eb4e9638606ac7733c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.15000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2835178070394785709, guid: a54ff21ef0068eb4e9638606ac7733c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.13673508
+      objectReference: {fileID: 0}
     - target: {fileID: 2862063452571121222, guid: a54ff21ef0068eb4e9638606ac7733c5,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 526a7745e15193f4b942c2f8426e652c, type: 2}
+    - target: {fileID: 5067024697727227686, guid: a54ff21ef0068eb4e9638606ac7733c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.1100001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067024697727227686, guid: a54ff21ef0068eb4e9638606ac7733c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.17596138
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188035511338713342, guid: a54ff21ef0068eb4e9638606ac7733c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5188035511338713342, guid: a54ff21ef0068eb4e9638606ac7733c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.3475151
+      objectReference: {fileID: 0}
+    - target: {fileID: 7039587221008248426, guid: a54ff21ef0068eb4e9638606ac7733c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.37000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 7039587221008248426, guid: a54ff21ef0068eb4e9638606ac7733c5,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0.13673508
+      objectReference: {fileID: 0}
     - target: {fileID: 8167343204826147900, guid: a54ff21ef0068eb4e9638606ac7733c5,
         type: 3}
       propertyPath: m_RootOrder
@@ -269,7 +319,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 8.5584213e+36, z: 7.41e-43, w: 8.403259}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -576,4 +626,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2132187055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2132187056}
+  m_Layer: 0
+  m_Name: fugkinLaser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2132187056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132187055}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.39, y: 4.02, z: -3.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

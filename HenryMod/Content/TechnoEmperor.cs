@@ -29,7 +29,7 @@ namespace HenryMod.Modules.Survivors
             bodyColor = Color.white,
 
             crosshair = Modules.Assets.LoadCrosshair("Standard"),
-            podPrefab = RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/NetworkedObjects/SurvivorPod"),
+            podPrefab = LegacyResourcesAPI.Load<GameObject>("prefabs/networkedobjects/robocratepod"),
 
             maxHealth = 110f,
             healthRegen = 1.5f,
@@ -87,16 +87,16 @@ namespace HenryMod.Modules.Survivors
             SkillDef lockOnSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo(prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_MISSILE_NAME",
                                                                                       prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_MISSILE_DESCRIPTION",
                                                                                       Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texBazookaOutIcon"),
-                                                                                      new EntityStates.SerializableEntityStateType(typeof(SkillStates.SlashCombo)),
-                                                                                      "Body",
-                                                                                      true));
+                                                                                      new EntityStates.SerializableEntityStateType(typeof(SkillStates.LockOnCharge)),
+                                                                                      "Weapon",
+                                                                                      false));
 
             SkillDef vulkanSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo(prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_VULKAN_NAME",
                                                                                       prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_VULKAN_DESCRIPTION",
                                                                                       Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texBazookaIcon"),
                                                                                       new EntityStates.SerializableEntityStateType(typeof(SkillStates.Shoot)),
-                                                                                      "Body",
-                                                                                      false));
+                                                                                      "Weapon",
+                                                                                      true));
 
 
             Modules.Skills.AddPrimarySkills(bodyPrefab, lockOnSkillDef); 
@@ -111,7 +111,7 @@ namespace HenryMod.Modules.Survivors
                 skillDescriptionToken = prefix + "_TECHNO_EMPEROR_BODY_SECONDARY_BOMB_DESCRIPTION",
                 skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texSpecialIcon"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.ThrowBomb)),
-                activationStateMachineName = "Slide",
+                activationStateMachineName = "Weapon",
                 baseMaxStock = 3,
                 baseRechargeInterval = 4f,
                 beginSkillCooldownOnSkillEnd = true,
@@ -139,7 +139,7 @@ namespace HenryMod.Modules.Survivors
                 skillDescriptionToken = prefix + "_TECHNO_EMPEROR_BODY_UTILITY_ROLL_DESCRIPTION",
                 skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texUtilityIcon"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.Roll)),
-                activationStateMachineName = "Body",
+                activationStateMachineName = "Slide",
                 baseMaxStock = 1,
                 baseRechargeInterval = 4f,
                 beginSkillCooldownOnSkillEnd = false,
@@ -157,7 +157,6 @@ namespace HenryMod.Modules.Survivors
             });
 
             Modules.Skills.AddUtilitySkills(bodyPrefab, rollSkillDef);
-            Modules.Skills.AddSpecialSkills(bodyPrefab, rollSkillDef);
             #endregion            
             
             #region Special
@@ -167,25 +166,24 @@ namespace HenryMod.Modules.Survivors
                 skillNameToken = prefix + "_TECHNO_EMPEROR_BODY_SPECIAL_CANNON_NAME",
                 skillDescriptionToken = prefix + "_TECHNO_EMPEROR_BODY_SPECIAL_CANNON_DESCRIPTION",
                 skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texStingerIcon"),
-                activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.SlashCombo)),
-                activationStateMachineName = "Body",
+                activationState = new EntityStates.SerializableEntityStateType(typeof(EntityStates.Captain.Weapon.SetupAirstrikeAlt)),
+                activationStateMachineName = "Weapon",
                 baseMaxStock = 1,
                 baseRechargeInterval = 60f,
                 beginSkillCooldownOnSkillEnd = false,
                 canceledFromSprinting = false,
-                forceSprintDuringState = true,
+                forceSprintDuringState = false,
                 fullRestockOnAssign = true,
-                interruptPriority = EntityStates.InterruptPriority.PrioritySkill,
+                interruptPriority = EntityStates.InterruptPriority.Skill,
                 resetCooldownTimerOnUse = false,
-                isCombatSkill = false,
-                mustKeyPress = false,
+                isCombatSkill = true,
+                mustKeyPress = true,
                 cancelSprintingOnActivation = false,
                 rechargeStock = 1,
                 requiredStock = 1,
                 stockToConsume = 1
             });
 
-            Modules.Skills.AddUtilitySkills(bodyPrefab, rollSkillDef);
             Modules.Skills.AddSpecialSkills(bodyPrefab, cannonSkillDef);
 #endregion
 

@@ -31,23 +31,6 @@ namespace HenryMod.Modules
         //change this to your project's name if/when you've renamed it
         private const string csProjName = "HenryMod";
 
-        #region tesla
-        public static GameObject TeslaCoil;
-        public static GameObject TeslaCoilBlueprint;
-
-        public static GameObject TeslaIndicatorPrefab;
-        public static GameObject TeslaIndicatorPrefabDash;
-
-        public static GameObject TeslaLoaderZapConeProjectile;
-        public static GameObject TeslaZapConeEffect;
-
-        public static GameObject TeslaLightningOrbEffectRed;
-        public static GameObject TeslaMageLightningOrbEffectRed;
-        public static GameObject TeslaMageLightningOrbEffectRedThick;
-
-        public static Material ChainLightningMaterial;
-        #endregion
-
         internal static void Initialize()
         {
             if (assetbundleName == "myassetbundle")
