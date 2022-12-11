@@ -1,12 +1,12 @@
 ﻿using BepInEx.Configuration;
-using HenryMod.Modules.Characters;
+using TechnoEmperorMod.Modules.Characters;
 using RoR2;
 using RoR2.Skills;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HenryMod.Modules.Survivors
+namespace TechnoEmperorMod.Modules.Survivors
 {
     internal class TechnoEmperor : SurvivorBase
     {
@@ -14,7 +14,7 @@ namespace HenryMod.Modules.Survivors
         //don't upload to thunderstore without changing this
         public override string prefabBodyName => "Eggman";
 
-        public const string TECHNO_EMPEROR_PREFIX = HenryPlugin.DEVELOPER_PREFIX + "_TECHNO_EMPEROR_BODY_";
+        public const string TECHNO_EMPEROR_PREFIX = TechnoEmperorPlugin.DEVELOPER_PREFIX + "_TECHNO_EMPEROR_BODY_";
 
         //used when registering your survivor's language tokens
         public override string survivorTokenPrefix => TECHNO_EMPEROR_PREFIX;
@@ -28,7 +28,7 @@ namespace HenryMod.Modules.Survivors
             characterPortrait = Assets.mainAssetBundle.LoadAsset<Texture>("texHenryIcon"),
             bodyColor = Color.white,
 
-            crosshair = Modules.Assets.LoadCrosshair("Standard"),
+            crosshair = Modules.Assets.LoadCrosshair("Engi"),
             podPrefab = LegacyResourcesAPI.Load<GameObject>("prefabs/networkedobjects/robocratepod"),
 
             maxHealth = 110f,
@@ -80,14 +80,14 @@ namespace HenryMod.Modules.Survivors
         public override void InitializeSkills()
         {
             Modules.Skills.CreateSkillFamilies(bodyPrefab);
-            string prefix = HenryPlugin.DEVELOPER_PREFIX;
+            string prefix = TechnoEmperorPlugin.DEVELOPER_PREFIX;
 
             #region Primaries
             //Creates a skilldef for a typical primary 
             SkillDef lockOnSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo(prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_MISSILE_NAME",
                                                                                       prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_MISSILE_DESCRIPTION",
                                                                                       Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texBazookaOutIcon"),
-                                                                                      new EntityStates.SerializableEntityStateType(typeof(SkillStates.LockOnCharge)),
+                                                                                      new EntityStates.SerializableEntityStateType(typeof(SkillStates.LockOn)),
                                                                                       "Weapon",
                                                                                       false));
 
@@ -112,7 +112,7 @@ namespace HenryMod.Modules.Survivors
                 skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texSpecialIcon"),
                 activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.ThrowBomb)),
                 activationStateMachineName = "Weapon",
-                baseMaxStock = 3,
+                baseMaxStock = 1,
                 baseRechargeInterval = 4f,
                 beginSkillCooldownOnSkillEnd = true,
                 canceledFromSprinting = false,
@@ -122,8 +122,7 @@ namespace HenryMod.Modules.Survivors
                 resetCooldownTimerOnUse = false,
                 isCombatSkill = true,
                 mustKeyPress = true,
-                cancelSprintingOnActivation = true,
-                rechargeStock = 3,
+                cancelSprintingOnActivation = true,                rechargeStock = 3,
                 requiredStock = 1,
                 stockToConsume = 1
             });

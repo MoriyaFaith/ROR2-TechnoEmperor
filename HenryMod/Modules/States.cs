@@ -1,21 +1,26 @@
-﻿using HenryMod.SkillStates;
-using HenryMod.SkillStates.BaseStates;
+﻿using TechnoEmperorMod.SkillStates;
+using TechnoEmperorMod.SkillStates.BaseStates;
 using System.Collections.Generic;
 using System;
 
-namespace HenryMod.Modules
+namespace TechnoEmperorMod.Modules
 {
     public static class States
     {
         internal static void RegisterStates()
         {
             Modules.Content.AddEntityState(typeof(BaseMeleeAttack));
-            Modules.Content.AddEntityState(typeof(SlashCombo));
+
+            #region Lock On
+            Modules.Content.AddEntityState(typeof(BaseLockOnMissileState));
+            Modules.Content.AddEntityState(typeof(LockOn));
+            Modules.Content.AddEntityState(typeof(FireMissiles));
+            Modules.Content.AddEntityState(typeof(Finish));
+            Modules.Content.AddEntityState(typeof(Startup));
+            #endregion
 
             Modules.Content.AddEntityState(typeof(Shoot));
-
             Modules.Content.AddEntityState(typeof(Roll));
-
             Modules.Content.AddEntityState(typeof(ThrowBomb));
         }
     }

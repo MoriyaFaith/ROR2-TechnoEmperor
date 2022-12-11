@@ -1,14 +1,14 @@
 ﻿using R2API;
 using System;
 
-namespace HenryMod.Modules
+namespace TechnoEmperorMod.Modules
 {
     internal static class Tokens
     {
         internal static void AddTokens()
         {
-            #region Eggman
-            string prefix = HenryPlugin.DEVELOPER_PREFIX + "_TECHNO_EMPEROR_BODY_";
+            #region Techno Emperor
+            string prefix = TechnoEmperorPlugin.DEVELOPER_PREFIX + "_TECHNO_EMPEROR_BODY_";
 
             string desc = "Henry is a skilled fighter who makes use of a wide arsenal of weaponry to take down his foes.<color=#CCD3E0>" + Environment.NewLine + Environment.NewLine;
             desc = desc + "< ! > Sword is a good all-rounder while Boxing Gloves are better for laying a beatdown on more powerful foes." + Environment.NewLine + Environment.NewLine;
@@ -16,7 +16,7 @@ namespace HenryMod.Modules
             desc = desc + "< ! > Roll has a lingering armor buff that helps to use it aggressively." + Environment.NewLine + Environment.NewLine;
             desc = desc + "< ! > Bomb can be used to wipe crowds with ease." + Environment.NewLine + Environment.NewLine;
 
-            string outro = "..and so he left, to expand his empire.";
+            string outro = "..and so he left, to further expand his empire.";
             string outroFailure = "..and so he vanished, brilliant lights falling dormant.";
 
             LanguageAPI.Add(prefix + "NAME", "Techno Emperor");
@@ -40,7 +40,7 @@ namespace HenryMod.Modules
 
             #region Primary
             LanguageAPI.Add(prefix + "PRIMARY_MISSILE_NAME", "Homing Missile Launch");
-            LanguageAPI.Add(prefix + "PRIMARY_MISSILE_DESCRIPTION", Helpers.agilePrefix + $"Lock-on up to 8 enemies while held down. On release, launch a missile at each target for <style=cIsDamage>{100f * StaticValues.swordDamageCoefficient}% damage</style>. Currently DOES NOT WORK.");
+            LanguageAPI.Add(prefix + "PRIMARY_MISSILE_DESCRIPTION", Helpers.agilePrefix + $"Lock-on up to 8 enemies while held down. On release, launch a missile at each target for <style=cIsDamage>{100f * StaticValues.missileDamageCoefficient}% damage</style>.");
             LanguageAPI.Add(prefix + "PRIMARY_VULKAN_NAME", "Vulkan Cannon");
             LanguageAPI.Add(prefix + "PRIMARY_VULKAN_DESCRIPTION", $"Fire a heavy cannon for <style=cIsDamage>{100f * StaticValues.gunDamageCoefficient}% damage</style>.");
             #endregion
@@ -51,8 +51,8 @@ namespace HenryMod.Modules
             #endregion
 
             #region Utility
-            LanguageAPI.Add(prefix + "UTILITY_ROLL_NAME", "Thruster Dodge");
-            LanguageAPI.Add(prefix + "UTILITY_ROLL_DESCRIPTION", $"Roll a short distance, gaining <style=cIsUtility>300 armor</style>. <style=cIsUtility>You cannot be hit during the roll.</style>");
+            LanguageAPI.Add(prefix + "UTILITY_ROLL_NAME", "NRG Absorbtion Field");
+            LanguageAPI.Add(prefix + "UTILITY_ROLL_DESCRIPTION", $"Create a forcefield around you that absorbs projectiles and <style=cIsUtility>heals 60% of the damage absorbed</style>. <style=cIsDamage>Does not absorb </style>");
             #endregion
 
             #region Special

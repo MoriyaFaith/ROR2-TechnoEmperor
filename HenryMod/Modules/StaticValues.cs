@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HenryMod.Modules
+namespace TechnoEmperorMod.Modules
 {
     internal static class StaticValues
     {
@@ -10,11 +10,13 @@ namespace HenryMod.Modules
              + "< ! > Roll has a lingering armor buff that helps to use it aggressively." + Environment.NewLine + Environment.NewLine
              + "< ! > Bomb can be used to wipe crowds with ease." + Environment.NewLine + Environment.NewLine;
 
-        internal const float swordDamageCoefficient = 2.8f;
+        internal const float missileDamageCoefficient = 5f;
 
         internal const float gunDamageCoefficient = 4.2f;
 
-        internal const float bombDamageCoefficient = 16f;
+        internal const float bombDamageCoefficient = 8f;
+
+        internal const float shieldHealCoefficient = .6f;
 
         internal const float cannonDamageCoefficient = 100f;
     }
