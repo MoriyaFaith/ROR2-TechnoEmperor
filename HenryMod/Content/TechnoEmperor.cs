@@ -28,7 +28,7 @@ namespace TechnoEmperorMod.Modules.Survivors
             characterPortrait = Assets.mainAssetBundle.LoadAsset<Texture>("texHenryIcon"),
             bodyColor = Color.white,
 
-            crosshair = Modules.Assets.LoadCrosshair("Engi"),
+            crosshair = Modules.Assets.LoadAsset<GameObject>("TechnoTargetMarker"),
             podPrefab = LegacyResourcesAPI.Load<GameObject>("prefabs/networkedobjects/robocratepod"),
 
             maxHealth = 110f,
@@ -86,14 +86,14 @@ namespace TechnoEmperorMod.Modules.Survivors
             //Creates a skilldef for a typical primary 
             SkillDef lockOnSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo(prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_MISSILE_NAME",
                                                                                       prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_MISSILE_DESCRIPTION",
-                                                                                      Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texBazookaOutIcon"),
+                                                                                      Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texBazookaIcon"),
                                                                                       new EntityStates.SerializableEntityStateType(typeof(SkillStates.LockOn)),
                                                                                       "Weapon",
                                                                                       false));
 
             SkillDef vulkanSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo(prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_VULKAN_NAME",
                                                                                       prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_VULKAN_DESCRIPTION",
-                                                                                      Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texBazookaIcon"),
+                                                                                      Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texBazookaFireIcon"),
                                                                                       new EntityStates.SerializableEntityStateType(typeof(SkillStates.Shoot)),
                                                                                       "Weapon",
                                                                                       true));

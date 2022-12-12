@@ -62,7 +62,7 @@ namespace TechnoEmperorMod.SkillStates
 
 		private void FireMissile(HurtBox target, Vector3 position)
 		{
-			MissileUtils.FireMissile(base.inputBank.aimOrigin, base.characterBody, default(ProcChainMask), target.gameObject, this.damageStat * damageCoefficient, base.RollCrit(), Fire.projectilePrefab, DamageColorIndex.Default, Vector3.up, 0f, false);
+			MissileUtils.FireMissile(base.inputBank.aimOrigin, base.characterBody, default(ProcChainMask), target.gameObject, this.damageStat * damageCoefficient, base.RollCrit(), projectilePrefab, DamageColorIndex.Default, Vector3.up, 0f, false);
 		}
 
 		public override void OnExit()
@@ -73,7 +73,7 @@ namespace TechnoEmperorMod.SkillStates
 
 		public static float baseDurationPerMissile;
 		public static float damageCoefficient = Modules.StaticValues.missileDamageCoefficient;
-		public static GameObject projectilePrefab;
+		public static GameObject projectilePrefab = Modules.Projectiles.missilePrefab;
 		public static GameObject muzzleflashEffectPrefab;
 		public List<HurtBox> targetsList;
 		private int fireIndex;

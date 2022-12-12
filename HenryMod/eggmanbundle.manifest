@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 384894676
+CRC: 2008107395
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c9598946f8eb3f0d08baaf0b8382b70c
+    Hash: 496b5e15cc264a8e095ca9e0647b7ea2
   TypeTreeHash:
     serializedVersion: 2
-    Hash: fa55bc0ce8f81190db21369d030a2d95
+    Hash: 719459e69c8ce6c78d6f7148549cd8ef
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -40,6 +40,8 @@ ClassTypes:
 - Class: 108
   Script: {instanceID: 0}
 - Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 261c50d8a80898e4ebf2e8e415ea6766, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 751bd37d2e55f5f448dbb0d97812d9ba, type: 3}
@@ -57,6 +59,10 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
 - Class: 319
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
@@ -72,8 +78,10 @@ Assets:
 - Assets/EggmanAssets/Icons/texPrimaryIcon.png
 - Assets/EggmanAssets/VFX/Textures/texHenrySwing2.png
 - Assets/EggmanAssets/Icons/texBazookaIcon.png
+- Assets/EggmanAssets/Icons/UI/Animations/lockOnController.controller
 - Assets/EggmanAssets/Animation/clips/eggConfused.anim
 - Assets/EggmanAssets/Icons/texMasteryAchievement.png
+- Assets/EggmanAssets/Icons/UI/Animations/LockOnStart.anim
 - Assets/EggmanAssets/Animation/clips/hover.anim
 - Assets/EggmanAssets/Textures/eww02.png
 - Assets/EggmanAssets/Textures/eww12.png
@@ -87,6 +95,7 @@ Assets:
 - Assets/EggmanAssets/VFX/Textures/texFire.tga
 - Assets/EggmanAssets/Animation/clips/hurt2.anim
 - Assets/EggmanAssets/Materials/matWalkerDecal2.mat
+- Assets/EggmanAssets/Icons/texLockedOnIcon.png
 - Assets/EggmanAssets/Animation/clips/loss.anim
 - Assets/EggmanAssets/VFX/HenryDustEffect.prefab
 - Assets/EggmanAssets/VFX/Materials/matSmoke.mat
@@ -96,10 +105,12 @@ Assets:
 - Assets/EggmanAssets/Textures/ew13.png
 - Assets/EggmanAssets/VFX/Animation/bombAnim.anim
 - Assets/EggmanAssets/Icons/texSecondaryIcon.png
+- Assets/EggmanAssets/Icons/UI/texLockedOnInner.png
 - Assets/EggmanAssets/VFX/Materials/matHenrySwing2.mat
 - Assets/EggmanAssets/VFX/Textures/texRipple.png
 - Assets/EggmanAssets/VFX/ImpactHenrySlash.prefab
 - Assets/EggmanAssets/Materials/matGloves.mat
+- Assets/EggmanAssets/Icons/UI/Animations/LockOnIcon.anim
 - Assets/EggmanAssets/Textures/eww2p00.png
 - Assets/EggmanAssets/Animation/clips/landLight.anim
 - Assets/EggmanAssets/Textures/ew29.png
@@ -152,6 +163,7 @@ Assets:
 - Assets/EggmanAssets/Animation/clips/bombAttack.anim
 - Assets/EggmanAssets/Materials/matEggCoat2.mat
 - Assets/EggmanAssets/Textures/eww11.png
+- Assets/EggmanAssets/Icons/UI/texLockedOnArrow.png
 - Assets/EggmanAssets/Materials/matWalkerUnderside.mat
 - Assets/EggmanAssets/Animation/clips/falling.anim
 - Assets/EggmanAssets/Icons/texScepterSpecialIcon.png
@@ -164,6 +176,7 @@ Assets:
 - Assets/EggmanAssets/Icons/texBazookaOutIcon.png
 - Assets/EggmanAssets/Textures/eww10.png
 - Assets/EggmanAssets/Icons/texUziIcon.png
+- Assets/EggmanAssets/Icons/UI/texLockedOnOuter.png
 - Assets/EggmanAssets/Animation/clips/dashForward.anim
 - Assets/EggmanAssets/Textures/eww20.png
 - Assets/EggmanAssets/Textures/bs0_ml1.png
@@ -201,12 +214,14 @@ Assets:
 - Assets/EggmanAssets/Animation/clips/intro.anim
 - Assets/EggmanAssets/Textures/ew_punch00.png
 - Assets/EggmanAssets/Animation/clips/aimYaw.anim
+- Assets/EggmanAssets/Icons/UI/texLockedOnIcon.psd
 - Assets/EggmanAssets/Textures/ef_beam01.png
 - Assets/EggmanAssets/Textures/ef_beam02.png
 - Assets/EggmanAssets/VFX/Materials/matEmbers.mat
 - Assets/EggmanAssets/Textures/ew32.png
 - Assets/EggmanAssets/Materials/matEggCoatStripe.mat
 - Assets/EggmanAssets/Icons/texStingerIcon.png
+- Assets/EggmanAssets/Icons/Materials/texLockedOnIcon.mat
 - Assets/EggmanAssets/Materials/matCockpit.mat
 - Assets/EggmanAssets/Textures/ewfoot.png
 - Assets/EggmanAssets/Materials/matWalkerBlack.mat
@@ -254,8 +269,10 @@ Assets:
 - Assets/EggmanAssets/Materials/matWalkerRed.mat
 - Assets/EggmanAssets/VFX/Textures/texSlash.png
 - Assets/EggmanAssets/Icons/texSpecialIcon.png
+- Assets/EggmanAssets/Icons/UI/texLockedOnDot.png
 - Assets/EggmanAssets/VFX/ImpactHenryPunch.prefab
 - Assets/EggmanAssets/Textures/mark2p00.png
+- Assets/EggmanAssets/Prefabs/TechnoTargetMarker.prefab
 - Assets/EggmanAssets/Materials/matEggCoat.mat
 - Assets/EggmanAssets/VFX/HenryBazookaExplosionEffect.prefab
 Dependencies: []

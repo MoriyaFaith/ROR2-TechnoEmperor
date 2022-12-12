@@ -9,12 +9,15 @@ namespace TechnoEmperorMod.Modules
     internal static class Projectiles
     {
         internal static GameObject bombPrefab;
+        internal static GameObject missilePrefab;
 
         internal static void RegisterProjectiles()
         {
             CreateBomb();
+            CreateMissile();
 
             AddProjectile(bombPrefab);
+            AddProjectile(missilePrefab);
         }
 
         internal static void AddProjectile(GameObject projectileToAdd)
@@ -24,7 +27,7 @@ namespace TechnoEmperorMod.Modules
 
         private static void CreateBomb()
         {
-            bombPrefab = CloneProjectilePrefab("CommandoGrenadeProjectile", "HenryBombProjectile");
+            bombPrefab = CloneProjectilePrefab("CommandoGrenadeProjectile", "TechnoEmperorBombProjectile");
 
             ProjectileImpactExplosion bombImpactExplosion = bombPrefab.GetComponent<ProjectileImpactExplosion>();
             InitializeImpactExplosion(bombImpactExplosion);
@@ -40,6 +43,13 @@ namespace TechnoEmperorMod.Modules
             ProjectileController bombController = bombPrefab.GetComponent<ProjectileController>();
             if (Modules.Assets.mainAssetBundle.LoadAsset<GameObject>("HenryBombGhost") != null) bombController.ghostPrefab = CreateGhostPrefab("HenryBombGhost");
             bombController.startSound = "";
+        }
+        private static void CreateMissile()
+        {
+            missilePrefab = CloneProjectilePrefab("EngiHarpoon", "TechnoEmperorMissileProjectile");
+
+            ProjectileController missileController = missilePrefab.GetComponent<ProjectileController>();
+            if (Modules.Assets.mainAssetBundle.LoadAsset<GameObject>("HenryBombGhost") != null) missileController.ghostPrefab = CreateGhostPrefab("HenryBombGhost");
         }
 
         private static void InitializeImpactExplosion(ProjectileImpactExplosion projectileImpactExplosion)

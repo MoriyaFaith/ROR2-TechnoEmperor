@@ -80,7 +80,7 @@ namespace TechnoEmperorMod.SkillStates
 				indicatorInfo = new Paint.IndicatorInfo
 				{
 					refCount = 0,
-					indicator = new Paint.EngiMissileIndicator(base.gameObject, LegacyResourcesAPI.Load<GameObject>("Prefabs/EngiMissileTrackingIndicator"))
+					indicator = new Paint.EngiMissileIndicator(base.gameObject, Modules.Assets.LoadAsset<GameObject>("TechnoTargetMarker"))
 				};
 				indicatorInfo.indicator.targetTransform = hurtBox.transform;
 				indicatorInfo.indicator.active = true;

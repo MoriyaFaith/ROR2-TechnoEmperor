@@ -43,23 +43,7 @@ namespace TechnoEmperorMod.SkillStates
 
         public override void FixedUpdate()
         {
-            this.fixedAge += Time.fixedDeltaTime;
-            this.stopwatch += Time.fixedDeltaTime;
-            if (this.stopwatch >= this.delayBeforeFiringProjectile && !this.firedProjectile || this.stopwatch >= this.delayBeforeFiringProjectile * 10f && !this.firedAllProjectile)
-            {
-                this.FireProjectile();
-                this.DoFireEffects();
-                this.stopwatch = 0;
-                this.firedProjectile = true;
-                bombIndex++;
-            }
-            if (bombIndex > 3)
-                this.firedAllProjectile = true;
-            if (this.stopwatch >= this.duration && base.isAuthority)
-            {
-                this.outer.SetNextStateToMain();
-                return;
-            }
+            base.FixedUpdate();
         }
 
         public override InterruptPriority GetMinimumInterruptPriority()
