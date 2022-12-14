@@ -17,7 +17,7 @@ namespace TechnoEmperorMod.SkillStates
 			if (base.isAuthority)
 			{
 				this.targetsList = new List<HurtBox>();
-				this.targetIndicators = new Dictionary<HurtBox, Paint.IndicatorInfo>();
+				this.targetIndicators = new Dictionary<HurtBox, IndicatorInfo>();
 				this.stickyTargetIndicator = new Indicator(base.gameObject, Paint.stickyTargetIndicatorPrefab);
 				this.search = new BullseyeSearch();
 			}
@@ -46,7 +46,7 @@ namespace TechnoEmperorMod.SkillStates
 			base.skillLocator.primary.UnsetSkillOverride(this, this.engiConfirmTargetDummySkillDef, GenericSkill.SkillOverridePriority.Contextual);
 			if (this.targetIndicators != null)
 			{
-				foreach (KeyValuePair<HurtBox, Paint.IndicatorInfo> keyValuePair in this.targetIndicators)
+				foreach (KeyValuePair<HurtBox, IndicatorInfo> keyValuePair in this.targetIndicators)
 				{
 					keyValuePair.Value.indicator.active = false;
 				}
@@ -74,13 +74,13 @@ namespace TechnoEmperorMod.SkillStates
 			}
 			Util.PlaySound(Paint.lockOnSoundString, base.gameObject);
 			this.targetsList.Add(hurtBox);
-			Paint.IndicatorInfo indicatorInfo;
+			IndicatorInfo indicatorInfo;
 			if (!this.targetIndicators.TryGetValue(hurtBox, out indicatorInfo))
 			{
-				indicatorInfo = new Paint.IndicatorInfo
+				indicatorInfo = new IndicatorInfo
 				{
 					refCount = 0,
-					indicator = new Paint.EngiMissileIndicator(base.gameObject, Modules.Assets.LoadAsset<GameObject>("TechnoTargetMarker"))
+					indicator = new LockOnIndicator(base.gameObject, Modules.Assets.lockOnTarget)
 				};
 				indicatorInfo.indicator.targetTransform = hurtBox.transform;
 				indicatorInfo.indicator.active = true;
@@ -95,7 +95,7 @@ namespace TechnoEmperorMod.SkillStates
 		{
 			HurtBox key = this.targetsList[i];
 			this.targetsList.RemoveAt(i);
-			Paint.IndicatorInfo indicatorInfo;
+			IndicatorInfo indicatorInfo;
 			if (this.targetIndicators.TryGetValue(key, out indicatorInfo))
 			{
 				indicatorInfo.refCount--;
@@ -228,7 +228,7 @@ namespace TechnoEmperorMod.SkillStates
 		public static float maxAngle;
 		public static float maxDistance;
 		private List<HurtBox> targetsList;
-		private Dictionary<HurtBox, Paint.IndicatorInfo> targetIndicators;
+		private Dictionary<HurtBox, IndicatorInfo> targetIndicators;
 		private Indicator stickyTargetIndicator;
 		private SkillDef engiConfirmTargetDummySkillDef;
 		private SkillDef engiCancelTargetingDummySkillDef;
@@ -243,11 +243,12 @@ namespace TechnoEmperorMod.SkillStates
 		private struct IndicatorInfo
 		{
 			public int refCount;
-			public Paint.EngiMissileIndicator indicator;
+			public LockOnIndicator indicator;
 		}
 
-		private class EngiMissileIndicator : Indicator
+		private class LockOnIndicator : Indicator
 		{
+			public int missileCount;
 			public override void UpdateVisualizer()
 			{
 				base.UpdateVisualizer();
@@ -273,10 +274,9 @@ namespace TechnoEmperorMod.SkillStates
 				}
 			}
 
-			public EngiMissileIndicator(GameObject owner, GameObject visualizerPrefab) : base(owner, visualizerPrefab)
+			public LockOnIndicator(GameObject owner, GameObject visualizerPrefab) : base(owner, visualizerPrefab)
 			{
 			}
-			public int missileCount;
 		}
 	}
 }

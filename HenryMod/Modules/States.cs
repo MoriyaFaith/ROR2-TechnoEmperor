@@ -18,6 +18,10 @@ namespace TechnoEmperorMod.Modules
             Modules.Content.AddEntityState(typeof(Finish));
             Modules.Content.AddEntityState(typeof(Startup));
             #endregion
+            #region
+            Modules.Content.AddEntityState(typeof(ShieldDeploy));
+            Modules.Content.AddEntityState(typeof(ShieldStop));
+            #endregion
 
             Modules.Content.AddEntityState(typeof(Shoot));
             Modules.Content.AddEntityState(typeof(Roll));

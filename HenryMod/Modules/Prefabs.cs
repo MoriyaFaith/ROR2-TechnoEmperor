@@ -137,7 +137,7 @@ namespace TechnoEmperorMod.Modules {
             SetupRagdoll(model);
 
             Modules.Content.AddCharacterBodyPrefab(newBodyPrefab);
-
+            Modules.Assets.ConvertAllRenderersToHopooShader(newBodyPrefab);
             return newBodyPrefab;
         }
 

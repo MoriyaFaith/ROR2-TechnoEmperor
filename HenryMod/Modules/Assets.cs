@@ -12,7 +12,7 @@ namespace TechnoEmperorMod.Modules
 {
     internal static class Assets
     {
-        #region henry's stuff
+        #region henry's stuff, unused
         // particle effects
         internal static GameObject swordSwingEffect;
         internal static GameObject swordHitImpactEffect;
@@ -21,6 +21,11 @@ namespace TechnoEmperorMod.Modules
 
         // networked hit sounds
         internal static NetworkSoundEventDef swordHitSoundEvent;
+        #endregion
+
+        #region Conquerer's Stuff
+        internal static GameObject lockOnTarget;
+
         #endregion
 
         // the assetbundle to load assets from
@@ -106,6 +111,32 @@ namespace TechnoEmperorMod.Modules
 
             swordSwingEffect = Assets.LoadEffect("HenrySwordSwingEffect", true);
             swordHitImpactEffect = Assets.LoadEffect("ImpactHenrySlash");
+            lockOnTarget = CreateLockOnIndicator();
+        }
+
+        private static GameObject CreateLockOnIndicator()
+        {
+
+            GameObject indicatorPrefab = PrefabAPI.InstantiateClone(RoR2.LegacyResourcesAPI.Load<GameObject>("Prefabs/LightningIndicator"), "LockOnIndicator", false);
+
+            UnityEngine.Object.DestroyImmediate(indicatorPrefab.transform.Find("TextMeshPro").gameObject);
+            UnityEngine.Object.DestroyImmediate(indicatorPrefab.transform.Find("Holder/Brackets").gameObject);
+
+            indicatorPrefab.transform.localScale = Vector3.one * .15f;
+            indicatorPrefab.transform.localPosition = Vector3.zero;
+            indicatorPrefab.transform.Find("Holder").rotation = Quaternion.identity;
+            indicatorPrefab.transform.Find("Holder/Brackets").rotation = Quaternion.identity;
+
+            SpriteRenderer spriteRenderer = indicatorPrefab.GetComponentInChildren<SpriteRenderer>();
+            spriteRenderer.sprite = null;
+            spriteRenderer.color = Color.green;
+            spriteRenderer.size = Vector2.zero;
+            spriteRenderer.transform.localRotation = Quaternion.identity;
+            spriteRenderer.transform.localPosition = Vector3.zero;
+
+            UnityEngine.Object.Internal_InstantiateSingleWithParent(LoadAsset<GameObject>("ConquererTargetMarker"), indicatorPrefab.transform.Find("Holder/Brackets"), Vector3.zero, Quaternion.identity);
+
+            return indicatorPrefab;
         }
 
         private static GameObject CreateTracer(string originalTracerName, string newTracerName)
@@ -143,6 +174,8 @@ namespace TechnoEmperorMod.Modules
 
             foreach (Renderer i in objectToConvert.GetComponentsInChildren<Renderer>())
             {
+                if (i is ParticleSystemRenderer)
+                    continue;
                 i?.material?.SetHopooMaterial();
             }
         }

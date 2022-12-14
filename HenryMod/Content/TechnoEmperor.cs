@@ -28,7 +28,7 @@ namespace TechnoEmperorMod.Modules.Survivors
             characterPortrait = Assets.mainAssetBundle.LoadAsset<Texture>("texHenryIcon"),
             bodyColor = Color.white,
 
-            crosshair = Modules.Assets.LoadAsset<GameObject>("TechnoTargetMarker"),
+            crosshair = Modules.Assets.LoadCrosshair("Captain"),
             podPrefab = LegacyResourcesAPI.Load<GameObject>("prefabs/networkedobjects/robocratepod"),
 
             maxHealth = 110f,
@@ -84,12 +84,29 @@ namespace TechnoEmperorMod.Modules.Survivors
 
             #region Primaries
             //Creates a skilldef for a typical primary 
-            SkillDef lockOnSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo(prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_MISSILE_NAME",
-                                                                                      prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_MISSILE_DESCRIPTION",
-                                                                                      Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texBazookaIcon"),
-                                                                                      new EntityStates.SerializableEntityStateType(typeof(SkillStates.LockOn)),
-                                                                                      "Weapon",
-                                                                                      false));
+            SkillDef lockOnSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo
+            {
+                skillName = prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_MISSILE_NAME",
+                skillNameToken = prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_MISSILE_NAME",
+                skillDescriptionToken = prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_MISSILE_DESCRIPTION",
+                skillIcon = Modules.Assets.mainAssetBundle.LoadAsset<Sprite>("texMissileIcon"),
+                activationState = new EntityStates.SerializableEntityStateType(typeof(SkillStates.ThrowBomb)),
+                activationStateMachineName = "Weapon",
+                baseMaxStock = 1,
+                baseRechargeInterval = 4f,
+                beginSkillCooldownOnSkillEnd = true,
+                canceledFromSprinting = false,
+                forceSprintDuringState = false,
+                fullRestockOnAssign = false,
+                interruptPriority = EntityStates.InterruptPriority.Skill,
+                resetCooldownTimerOnUse = false,
+                isCombatSkill = true,
+                mustKeyPress = true,
+                cancelSprintingOnActivation = true,
+                rechargeStock = 3,
+                requiredStock = 1,
+                stockToConsume = 1
+            });
 
             SkillDef vulkanSkillDef = Modules.Skills.CreateSkillDef(new SkillDefInfo(prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_VULKAN_NAME",
                                                                                       prefix + "_TECHNO_EMPEROR_BODY_PRIMARY_VULKAN_DESCRIPTION",

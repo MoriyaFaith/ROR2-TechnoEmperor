@@ -37,6 +37,7 @@ namespace TechnoEmperorMod.Modules
             bombImpactExplosion.lifetime = 12f;
             bombImpactExplosion.impactEffect = Modules.Assets.bombExplosionEffect;
             //bombImpactExplosion.lifetimeExpiredSound = Modules.Assets.CreateNetworkSoundEventDef("HenryBombExplosion");
+
             bombImpactExplosion.timerAfterImpact = true;
             bombImpactExplosion.lifetimeAfterImpact = 0.1f;
 
@@ -49,7 +50,7 @@ namespace TechnoEmperorMod.Modules
             missilePrefab = CloneProjectilePrefab("EngiHarpoon", "TechnoEmperorMissileProjectile");
 
             ProjectileController missileController = missilePrefab.GetComponent<ProjectileController>();
-            if (Modules.Assets.mainAssetBundle.LoadAsset<GameObject>("HenryBombGhost") != null) missileController.ghostPrefab = CreateGhostPrefab("HenryBombGhost");
+            if (Modules.Assets.mainAssetBundle.LoadAsset<GameObject>("HenryMissileGhost") != null) missileController.ghostPrefab = CreateGhostPrefab("HenryMissileGhost");
         }
 
         private static void InitializeImpactExplosion(ProjectileImpactExplosion projectileImpactExplosion)
